@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4C9607012DC5717F0054D0FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9606F72DC5717F0054D0FD /* AppDelegate.swift */; };
+		4C9607032DC5717F0054D0FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9606FF2DC5717F0054D0FD /* ViewController.swift */; };
+		4C9607042DC5717F0054D0FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C9606F82DC5717F0054D0FD /* Assets.xcassets */; };
+		4C9607062DC5717F0054D0FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C9606FB2DC5717F0054D0FD /* LaunchScreen.storyboard */; };
+		4C96070A2DC571880054D0FD /* IdealistaChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9607082DC571880054D0FD /* IdealistaChallengeTests.swift */; };
+		4C96070E2DC5718B0054D0FD /* IdealistaChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C96070B2DC5718B0054D0FD /* IdealistaChallengeUITests.swift */; };
+		4C96070F2DC5718B0054D0FD /* IdealistaChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C96070C2DC5718B0054D0FD /* IdealistaChallengeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		4C9606692DC56B3E0054D0FD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,38 +37,15 @@
 		4C9606522DC56B3C0054D0FD /* IdealistaChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdealistaChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C9606682DC56B3E0054D0FD /* IdealistaChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdealistaChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C9606722DC56B3E0054D0FD /* IdealistaChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdealistaChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C9606F72DC5717F0054D0FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4C9606F82DC5717F0054D0FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C9606F92DC5717F0054D0FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C9606FA2DC5717F0054D0FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4C9606FF2DC5717F0054D0FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C9607082DC571880054D0FD /* IdealistaChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdealistaChallengeTests.swift; sourceTree = "<group>"; };
+		4C96070B2DC5718B0054D0FD /* IdealistaChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdealistaChallengeUITests.swift; sourceTree = "<group>"; };
+		4C96070C2DC5718B0054D0FD /* IdealistaChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdealistaChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		4C96067A2DC56B3E0054D0FD /* Exceptions for "IdealistaChallenge" folder in "IdealistaChallenge" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 4C9606512DC56B3C0054D0FD /* IdealistaChallenge */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		4C9606542DC56B3C0054D0FD /* IdealistaChallenge */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				4C96067A2DC56B3E0054D0FD /* Exceptions for "IdealistaChallenge" folder in "IdealistaChallenge" target */,
-			);
-			path = IdealistaChallenge;
-			sourceTree = "<group>";
-		};
-		4C96066B2DC56B3E0054D0FD /* IdealistaChallengeTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = IdealistaChallengeTests;
-			sourceTree = "<group>";
-		};
-		4C9606752DC56B3E0054D0FD /* IdealistaChallengeUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = IdealistaChallengeUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4C96064F2DC56B3C0054D0FD /* Frameworks */ = {
@@ -88,9 +75,9 @@
 		4C9606492DC56B3C0054D0FD = {
 			isa = PBXGroup;
 			children = (
-				4C9606542DC56B3C0054D0FD /* IdealistaChallenge */,
-				4C96066B2DC56B3E0054D0FD /* IdealistaChallengeTests */,
-				4C9606752DC56B3E0054D0FD /* IdealistaChallengeUITests */,
+				4C9607002DC5717F0054D0FD /* IdealistaChallenge */,
+				4C9607092DC571880054D0FD /* IdealistaChallengeTests */,
+				4C96070D2DC5718B0054D0FD /* IdealistaChallengeUITests */,
 				4C9606532DC56B3C0054D0FD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +90,107 @@
 				4C9606722DC56B3E0054D0FD /* IdealistaChallengeUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4C9607002DC5717F0054D0FD /* IdealistaChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				4C9607102DC5718F0054D0FD /* AppDelegate */,
+				4C9607112DC5719A0054D0FD /* Commons */,
+				4C9607122DC5719F0054D0FD /* Modules */,
+				4C9607132DC571A40054D0FD /* Entity */,
+				4C9607142DC571B30054D0FD /* CoreComponents */,
+				4C9607152DC571BF0054D0FD /* Resources */,
+				4C9607162DC571C80054D0FD /* Info */,
+				4C9606FF2DC5717F0054D0FD /* ViewController.swift */,
+			);
+			path = IdealistaChallenge;
+			sourceTree = "<group>";
+		};
+		4C9607092DC571880054D0FD /* IdealistaChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				4C9607082DC571880054D0FD /* IdealistaChallengeTests.swift */,
+			);
+			path = IdealistaChallengeTests;
+			sourceTree = "<group>";
+		};
+		4C96070D2DC5718B0054D0FD /* IdealistaChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4C96070B2DC5718B0054D0FD /* IdealistaChallengeUITests.swift */,
+				4C96070C2DC5718B0054D0FD /* IdealistaChallengeUITestsLaunchTests.swift */,
+			);
+			path = IdealistaChallengeUITests;
+			sourceTree = "<group>";
+		};
+		4C9607102DC5718F0054D0FD /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4C9606F72DC5717F0054D0FD /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		4C9607112DC5719A0054D0FD /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		4C9607122DC5719F0054D0FD /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		4C9607132DC571A40054D0FD /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		4C9607142DC571B30054D0FD /* CoreComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreComponents;
+			sourceTree = "<group>";
+		};
+		4C9607152DC571BF0054D0FD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C9607182DC572240054D0FD /* LaunchScreen */,
+				4C9607172DC572170054D0FD /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4C9607162DC571C80054D0FD /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				4C9606F92DC5717F0054D0FD /* Info.plist */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		4C9607172DC572170054D0FD /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4C9606F82DC5717F0054D0FD /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		4C9607182DC572240054D0FD /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				4C9606FB2DC5717F0054D0FD /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,9 +207,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				4C9606542DC56B3C0054D0FD /* IdealistaChallenge */,
 			);
 			name = IdealistaChallenge;
 			packageProductDependencies = (
@@ -143,9 +228,6 @@
 			dependencies = (
 				4C96066A2DC56B3E0054D0FD /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				4C96066B2DC56B3E0054D0FD /* IdealistaChallengeTests */,
-			);
 			name = IdealistaChallengeTests;
 			packageProductDependencies = (
 			);
@@ -165,9 +247,6 @@
 			);
 			dependencies = (
 				4C9606742DC56B3E0054D0FD /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				4C9606752DC56B3E0054D0FD /* IdealistaChallengeUITests */,
 			);
 			name = IdealistaChallengeUITests;
 			packageProductDependencies = (
@@ -225,6 +304,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C9607042DC5717F0054D0FD /* Assets.xcassets in Resources */,
+				4C9607062DC5717F0054D0FD /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +330,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C9607012DC5717F0054D0FD /* AppDelegate.swift in Sources */,
+				4C9607032DC5717F0054D0FD /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C96070A2DC571880054D0FD /* IdealistaChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +347,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C96070E2DC5718B0054D0FD /* IdealistaChallengeUITests.swift in Sources */,
+				4C96070F2DC5718B0054D0FD /* IdealistaChallengeUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +367,17 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		4C9606FB2DC5717F0054D0FD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C9606FA2DC5717F0054D0FD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		4C96067C2DC56B3E0054D0FD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -290,17 +387,20 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = IdealistaChallenge/Info.plist;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = YES;
+				INFOPLIST_FILE = IdealistaChallenge/Info/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Idealista;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mariaherrerovaras.IdealistaChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -317,17 +417,20 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = IdealistaChallenge/Info.plist;
+				GENERATE_PKGINFO_FILE = YES;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = YES;
+				INFOPLIST_FILE = IdealistaChallenge/Info/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Idealista;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mariaherrerovaras.IdealistaChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -371,6 +474,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DONT_GENERATE_INFOPLIST_FILE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -388,6 +492,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_PKGINFO_FILE = NO;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -434,6 +542,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DONT_GENERATE_INFOPLIST_FILE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -445,6 +554,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_PKGINFO_FILE = NO;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
