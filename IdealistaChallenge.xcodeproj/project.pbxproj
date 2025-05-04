@@ -39,6 +39,17 @@
 		4C96075B2DC5878C0054D0FD /* SelectableCellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C96075A2DC5878C0054D0FD /* SelectableCellRepresentable.swift */; };
 		4C96075E2DC7DFFD0054D0FD /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C96075D2DC7DFFD0054D0FD /* Presenter.swift */; };
 		4C9607612DC7E0230054D0FD /* Queueable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9607602DC7E0230054D0FD /* Queueable.swift */; };
+		4C9607682DC7E6470054D0FD /* AdsApiSourceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9607672DC7E6470054D0FD /* AdsApiSourceInterface.swift */; };
+		4C96076A2DC7E64E0054D0FD /* AdsApiSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9607692DC7E64E0054D0FD /* AdsApiSource.swift */; };
+		4C96076C2DC7E65E0054D0FD /* AdApiMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C96076B2DC7E65E0054D0FD /* AdApiMapper.swift */; };
+		4C96076E2DC7E66A0054D0FD /* AdApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C96076D2DC7E66A0054D0FD /* AdApiModel.swift */; };
+		4C9607712DC7EC680054D0FD /* PriceInfoApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9607702DC7EC680054D0FD /* PriceInfoApiModel.swift */; };
+		4C9607742DC7EC840054D0FD /* MultimediaApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9607732DC7EC840054D0FD /* MultimediaApiModel.swift */; };
+		4C9607772DC7ECB70054D0FD /* FeatureApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9607762DC7ECB70054D0FD /* FeatureApiModel.swift */; };
+		4C96077A2DC7ECD80054D0FD /* ParkingSpaceApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9607792DC7ECD80054D0FD /* ParkingSpaceApiModel.swift */; };
+		4C96077D2DC7F08C0054D0FD /* OperationEnumApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C96077C2DC7F08C0054D0FD /* OperationEnumApiModel.swift */; };
+		4C96077F2DC7F12F0054D0FD /* ImageApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C96077E2DC7F12F0054D0FD /* ImageApiModel.swift */; };
+		4C9607812DC7F16A0054D0FD /* PriceApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9607802DC7F16A0054D0FD /* PriceApiModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +106,17 @@
 		4C96075A2DC5878C0054D0FD /* SelectableCellRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableCellRepresentable.swift; sourceTree = "<group>"; };
 		4C96075D2DC7DFFD0054D0FD /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		4C9607602DC7E0230054D0FD /* Queueable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queueable.swift; sourceTree = "<group>"; };
+		4C9607672DC7E6470054D0FD /* AdsApiSourceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsApiSourceInterface.swift; sourceTree = "<group>"; };
+		4C9607692DC7E64E0054D0FD /* AdsApiSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsApiSource.swift; sourceTree = "<group>"; };
+		4C96076B2DC7E65E0054D0FD /* AdApiMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdApiMapper.swift; sourceTree = "<group>"; };
+		4C96076D2DC7E66A0054D0FD /* AdApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdApiModel.swift; sourceTree = "<group>"; };
+		4C9607702DC7EC680054D0FD /* PriceInfoApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceInfoApiModel.swift; sourceTree = "<group>"; };
+		4C9607732DC7EC840054D0FD /* MultimediaApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultimediaApiModel.swift; sourceTree = "<group>"; };
+		4C9607762DC7ECB70054D0FD /* FeatureApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureApiModel.swift; sourceTree = "<group>"; };
+		4C9607792DC7ECD80054D0FD /* ParkingSpaceApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingSpaceApiModel.swift; sourceTree = "<group>"; };
+		4C96077C2DC7F08C0054D0FD /* OperationEnumApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationEnumApiModel.swift; sourceTree = "<group>"; };
+		4C96077E2DC7F12F0054D0FD /* ImageApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageApiModel.swift; sourceTree = "<group>"; };
+		4C9607802DC7F16A0054D0FD /* PriceApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceApiModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,6 +419,10 @@
 		4C96073B2DC582B10054D0FD /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				4C9607622DC7E6020054D0FD /* Model */,
+				4C9607642DC7E6230054D0FD /* Mapper */,
+				4C9607672DC7E6470054D0FD /* AdsApiSourceInterface.swift */,
+				4C9607692DC7E64E0054D0FD /* AdsApiSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -450,6 +476,85 @@
 				4C9607602DC7E0230054D0FD /* Queueable.swift */,
 			);
 			path = Queue;
+			sourceTree = "<group>";
+		};
+		4C9607622DC7E6020054D0FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C9607632DC7E6170054D0FD /* Ad */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C9607632DC7E6170054D0FD /* Ad */ = {
+			isa = PBXGroup;
+			children = (
+				4C96077B2DC7F0420054D0FD /* Operation */,
+				4C9607752DC7ECAE0054D0FD /* Feature */,
+				4C9607722DC7EC7D0054D0FD /* Multimedia */,
+				4C9607782DC7ECBD0054D0FD /* ParkingSpace */,
+				4C96076F2DC7EC630054D0FD /* Price */,
+				4C96076D2DC7E66A0054D0FD /* AdApiModel.swift */,
+			);
+			path = Ad;
+			sourceTree = "<group>";
+		};
+		4C9607642DC7E6230054D0FD /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				4C9607652DC7E6320054D0FD /* Ad */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		4C9607652DC7E6320054D0FD /* Ad */ = {
+			isa = PBXGroup;
+			children = (
+				4C96076B2DC7E65E0054D0FD /* AdApiMapper.swift */,
+			);
+			path = Ad;
+			sourceTree = "<group>";
+		};
+		4C96076F2DC7EC630054D0FD /* Price */ = {
+			isa = PBXGroup;
+			children = (
+				4C9607702DC7EC680054D0FD /* PriceInfoApiModel.swift */,
+				4C9607802DC7F16A0054D0FD /* PriceApiModel.swift */,
+			);
+			path = Price;
+			sourceTree = "<group>";
+		};
+		4C9607722DC7EC7D0054D0FD /* Multimedia */ = {
+			isa = PBXGroup;
+			children = (
+				4C9607732DC7EC840054D0FD /* MultimediaApiModel.swift */,
+				4C96077E2DC7F12F0054D0FD /* ImageApiModel.swift */,
+			);
+			path = Multimedia;
+			sourceTree = "<group>";
+		};
+		4C9607752DC7ECAE0054D0FD /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				4C9607762DC7ECB70054D0FD /* FeatureApiModel.swift */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		4C9607782DC7ECBD0054D0FD /* ParkingSpace */ = {
+			isa = PBXGroup;
+			children = (
+				4C9607792DC7ECD80054D0FD /* ParkingSpaceApiModel.swift */,
+			);
+			path = ParkingSpace;
+			sourceTree = "<group>";
+		};
+		4C96077B2DC7F0420054D0FD /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				4C96077C2DC7F08C0054D0FD /* OperationEnumApiModel.swift */,
+			);
+			path = Operation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -597,22 +702,33 @@
 				4C9607012DC5717F0054D0FD /* AppDelegate.swift in Sources */,
 				4C9607352DC5800A0054D0FD /* UIWindow+Extensions.swift in Sources */,
 				4C9607492DC583900054D0FD /* AdsViewControllerInterface.swift in Sources */,
+				4C96077A2DC7ECD80054D0FD /* ParkingSpaceApiModel.swift in Sources */,
 				4C96074B2DC583970054D0FD /* AdsViewController.swift in Sources */,
 				4C9607252DC57B3D0054D0FD /* ViewControllerRepresentable.swift in Sources */,
 				4C96075E2DC7DFFD0054D0FD /* Presenter.swift in Sources */,
 				4C9607612DC7E0230054D0FD /* Queueable.swift in Sources */,
+				4C96076A2DC7E64E0054D0FD /* AdsApiSource.swift in Sources */,
+				4C96076E2DC7E66A0054D0FD /* AdApiModel.swift in Sources */,
 				4C9607332DC57F9B0054D0FD /* PropertyStoring.swift in Sources */,
 				4C9607302DC57E170054D0FD /* UIView+Extensions.swift in Sources */,
 				4C9607452DC583740054D0FD /* AdsPresenterInterface.swift in Sources */,
 				4C96072B2DC57DA50054D0FD /* LoadingIndicator.swift in Sources */,
 				4C9607542DC5854C0054D0FD /* UITableView+Extension.swift in Sources */,
+				4C96076C2DC7E65E0054D0FD /* AdApiMapper.swift in Sources */,
 				4C96073D2DC583240054D0FD /* AdsInteractorInterface.swift in Sources */,
+				4C9607682DC7E6470054D0FD /* AdsApiSourceInterface.swift in Sources */,
 				4C96074E2DC583F20054D0FD /* Router.swift in Sources */,
 				4C9607472DC5837F0054D0FD /* AdsPresenter.swift in Sources */,
+				4C9607742DC7EC840054D0FD /* MultimediaApiModel.swift in Sources */,
 				4C9607412DC5835C0054D0FD /* AdsRouterInterface.swift in Sources */,
+				4C96077D2DC7F08C0054D0FD /* OperationEnumApiModel.swift in Sources */,
+				4C9607812DC7F16A0054D0FD /* PriceApiModel.swift in Sources */,
+				4C9607712DC7EC680054D0FD /* PriceInfoApiModel.swift in Sources */,
 				4C96071C2DC57A7E0054D0FD /* NavigationController.swift in Sources */,
 				4C96072D2DC57DAB0054D0FD /* LoadingView.swift in Sources */,
+				4C96077F2DC7F12F0054D0FD /* ImageApiModel.swift in Sources */,
 				4C9607032DC5717F0054D0FD /* ViewController.swift in Sources */,
+				4C9607772DC7ECB70054D0FD /* FeatureApiModel.swift in Sources */,
 				4C9607272DC57B630054D0FD /* ViewRepresentable.swift in Sources */,
 				4C9607522DC5852A0054D0FD /* CellRepresentable.swift in Sources */,
 				4C9607432DC583680054D0FD /* AdsInteractor.swift in Sources */,
