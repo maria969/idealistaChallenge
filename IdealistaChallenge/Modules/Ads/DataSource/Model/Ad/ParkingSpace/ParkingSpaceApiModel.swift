@@ -12,7 +12,7 @@ public class ParkingSpaceApiModel: Decodable {
     // MARK: - Public Properties
     
     public let hasParkingSpace: Bool
-    public let isParkingSpaeceIncludedInPrice:  Bool
+    public let isParkingSpaeceIncludedInPrice: Bool?
     
     // MARK: - CodingKeys
     
@@ -26,6 +26,6 @@ public class ParkingSpaceApiModel: Decodable {
     public required init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.hasParkingSpace = try container.decode(Bool.self, forKey: .hasParkingSpace)
-        self.isParkingSpaeceIncludedInPrice = try container.decode(Bool.self, forKey: .isParkingSpaeceIncludedInPrice)
+        self.isParkingSpaeceIncludedInPrice = try container.decodeIfPresent(Bool.self, forKey: .isParkingSpaeceIncludedInPrice)
     }
 }

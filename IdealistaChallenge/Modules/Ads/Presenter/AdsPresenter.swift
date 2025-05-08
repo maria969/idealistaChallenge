@@ -13,9 +13,82 @@ public class AdsPresenter: AdsPresenterInterface {
     
     public weak var view: ViewControllerRepresentable?
     
+    // MARK: - Private Properties
+    
+    private let interactor: AdsInteractorInterface
+    private let routing: AdsRouterInterface
+    
+    private var adsView: AdsViewControllerInterface? {
+        return view as? AdsViewControllerInterface
+    }
+    
+    // MARK: - Initializers
+    
+    public required init(interactor: AdsInteractorInterface,
+                         routing: AdsRouterInterface) {
+        self.interactor = interactor
+        self.routing = routing
+        self.interactor.assignCallback(self)
+    }
+    
     // MARK: - Public Methods
     
     public func viewDidLoad() {
-        // LoadAds()
+        loadAds()
+    }
+    
+    // MARK: - Private Methods
+    
+    private func loadAds() {
+        adsView?.showLoading()
+        interactor.getAds { [weak self] (ads) in
+            guard let strongSelf = self else { return }
+            
+            //TODO: - Show Ads
+            print(ads)
+            
+            let cells = strongSelf.createCells(from: ads)
+            strongSelf.adsView?.showListModules(cells)
+            strongSelf.view?.hideLoading()
+    
+        } failure: { [weak self] (error) in
+            guard let strongSelf = self else { return }
+            
+            //TODO: - Show Error
+            
+            strongSelf.view?.hideLoading()
+        }
+
+    }
+}
+
+//MARK: - Cells UI Generation
+
+extension AdsPresenter {
+    private func createCells(from ads: [AdEntity]) -> [CellRepresentable] {
+        return map(ads: ads)
+        
+        // TODO: - Create Placeholder
+    }
+    
+    private func map(ads: [AdEntity]) -> [CellRepresentable] {
+        return ads.map { ad in
+            let model = AdUiModel(address: ad.address,
+                                  imageURL: URL(string: ad.thumbnailUrl),
+                                  propertyType: ad.propertyType,
+                                  operation: ad.operation.localizedString,
+                                  operationColor: ad.operation.operationColor,
+                                  description: ad.description,
+                                  priceInfo: ad.priceInfo)
+            
+            model.onSelection = { [weak self] in
+                guard let strongSelf = self else { return }
+                print("Present Detail")
+                
+                //TODO: - Present Detail
+            }
+            
+            return model
+        }
     }
 }

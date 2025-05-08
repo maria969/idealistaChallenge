@@ -76,10 +76,10 @@ public class AdsViewController: UIViewController {
 
 extension AdsViewController: AdsViewControllerInterface {
     public func showListModules(_ modules: [CellRepresentable]) {
-        
+        tableView.configure(with: modules)
     }
     
     public func addListModules(_ modules: [CellRepresentable]) {
-        
+        tableView.addModules(with: modules)
     }
 }

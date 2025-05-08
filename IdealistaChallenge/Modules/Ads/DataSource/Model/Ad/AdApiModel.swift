@@ -11,7 +11,7 @@ public class AdApiModel: Decodable {
     
     // MARK: - Public Properties
     
-    public let propertyCode: Int
+    public let propertyCode: String
     public let thumbnailUrl: String
     public let floor: String
     public let price: Float
@@ -68,7 +68,7 @@ public class AdApiModel: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.propertyCode = try container.decode(Int.self, forKey: .propertyCode)
+        self.propertyCode = try container.decode(String.self, forKey: .propertyCode)
         self.thumbnailUrl = try container.decode(String.self, forKey: .thumbnailUrl)
         self.floor = try container.decode(String.self, forKey: .floor)
         self.price = try container.decode(Float.self, forKey: .price)
