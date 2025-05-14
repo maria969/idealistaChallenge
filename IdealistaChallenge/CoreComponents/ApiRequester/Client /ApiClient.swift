@@ -47,6 +47,24 @@ public final class ApiClient {
                 do {
                     let decodedModel = try JSONDecoder().decode(T.self, from: data)
                     success(decodedModel)
+                } catch let decodingError as DecodingError {
+                    // Manejo específico de errores de decodificación
+                    switch decodingError {
+                    case .dataCorrupted(let context):
+                        print("Error: El dato está corrupto. Contexto: \(context.debugDescription)")
+                        print("Detalles: \(context.codingPath)")  // Muestra la ruta del campo con error
+                    case .keyNotFound(let key, let context):
+                        print("Error: La clave '\(key)' no se encontró. Contexto: \(context.debugDescription)")
+                        print("Detalles: \(context.codingPath)")  // Muestra la ruta del campo con error
+                    case .valueNotFound(let value, let context):
+                        print("Error: El valor esperado para '\(value)' no fue encontrado. Contexto: \(context.debugDescription)")
+                        print("Detalles: \(context.codingPath)")  // Muestra la ruta del campo con error
+                    case .typeMismatch(let type, let context):
+                        print("Error: Tipo incompatible. Esperado: \(type), pero se encontró otro tipo. Contexto: \(context.debugDescription)")
+                        print("Detalles: \(context.codingPath)")  // Muestra la ruta del campo con error
+                    @unknown default:
+                        print("Error desconocido de decodificación: \(decodingError)")
+                    }
                 } catch {
                     failure(ErrorApiModel(code: .undefined, data: data))
                 }

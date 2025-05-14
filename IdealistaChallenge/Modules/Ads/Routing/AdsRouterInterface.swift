@@ -9,4 +9,5 @@ import Foundation
 
 public protocol AdsRouterInterface: Router {
     static func createAdsView() -> AdsViewControllerInterface
+    func presentAd(ad: AdEntity)
 }

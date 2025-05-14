@@ -83,9 +83,7 @@ extension AdsPresenter {
             
             model.onSelection = { [weak self] in
                 guard let strongSelf = self else { return }
-                print("Present Detail")
-                
-                //TODO: - Present Detail
+                strongSelf.routing.presentAd(ad: ad)
             }
             
             return model

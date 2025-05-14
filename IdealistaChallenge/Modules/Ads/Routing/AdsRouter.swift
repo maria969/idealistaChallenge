@@ -32,4 +32,14 @@ public class AdsRouter: AdsRouterInterface {
         
         return view
     }
+    
+    public func presentAd(ad: AdEntity) {
+        guard let navigationController = view?.viewController.navigationController else { return }
+        
+        let adDetailVC = AdDetailRouter.createAdDetailView(withAd: ad)
+        
+        navigationController.push(viewController: adDetailVC,
+                                  animated: true)
+    }
+
 }
