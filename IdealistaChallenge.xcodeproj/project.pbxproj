@@ -61,10 +61,7 @@
 		4CC440852DCD037D0097CFCD /* ErrorApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC440842DCD037D0097CFCD /* ErrorApiModel.swift */; };
 		4CC440892DCD04000097CFCD /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC440882DCD04000097CFCD /* HTTPStatusCode.swift */; };
 		4CC4408C2DCD047A0097CFCD /* ApiDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC4408B2DCD047A0097CFCD /* ApiDecoder.swift */; };
-		4CC4408E2DCD07080097CFCD /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC4408D2DCD07080097CFCD /* APICall.swift */; };
 		4CC440902DCD070D0097CFCD /* APIPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC4408F2DCD070D0097CFCD /* APIPath.swift */; };
-		4CC440932DCD07500097CFCD /* APIPathConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC440922DCD07500097CFCD /* APIPathConvertible.swift */; };
-		4CC440952DCD07600097CFCD /* APICallConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC440942DCD07600097CFCD /* APICallConvertible.swift */; };
 		4CC4411D2DCD49980097CFCD /* ApiRequesterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC4411C2DCD49980097CFCD /* ApiRequesterInterface.swift */; };
 		4CC4411F2DCD499F0097CFCD /* ApiRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC4411E2DCD499F0097CFCD /* ApiRequester.swift */; };
 		4CC441222DCD4DB10097CFCD /* ApiSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC441212DCD4DB10097CFCD /* ApiSource.swift */; };
@@ -156,10 +153,7 @@
 		4CC440842DCD037D0097CFCD /* ErrorApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorApiModel.swift; sourceTree = "<group>"; };
 		4CC440882DCD04000097CFCD /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
 		4CC4408B2DCD047A0097CFCD /* ApiDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDecoder.swift; sourceTree = "<group>"; };
-		4CC4408D2DCD07080097CFCD /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 		4CC4408F2DCD070D0097CFCD /* APIPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPath.swift; sourceTree = "<group>"; };
-		4CC440922DCD07500097CFCD /* APIPathConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPathConvertible.swift; sourceTree = "<group>"; };
-		4CC440942DCD07600097CFCD /* APICallConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICallConvertible.swift; sourceTree = "<group>"; };
 		4CC4411C2DCD49980097CFCD /* ApiRequesterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequesterInterface.swift; sourceTree = "<group>"; };
 		4CC4411E2DCD499F0097CFCD /* ApiRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequester.swift; sourceTree = "<group>"; };
 		4CC441212DCD4DB10097CFCD /* ApiSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSource.swift; sourceTree = "<group>"; };
@@ -662,10 +656,8 @@
 		4CC440712DCCFFF90097CFCD /* Call */ = {
 			isa = PBXGroup;
 			children = (
-				4CC440912DCD07460097CFCD /* Protocols */,
 				4CC440862DCD03F00097CFCD /* Response */,
 				4CC440722DCD00080097CFCD /* ServerURL */,
-				4CC4408D2DCD07080097CFCD /* APICall.swift */,
 				4CC4408F2DCD070D0097CFCD /* APIPath.swift */,
 			);
 			path = Call;
@@ -752,15 +744,6 @@
 				4CC4408B2DCD047A0097CFCD /* ApiDecoder.swift */,
 			);
 			path = Decoder;
-			sourceTree = "<group>";
-		};
-		4CC440912DCD07460097CFCD /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				4CC440922DCD07500097CFCD /* APIPathConvertible.swift */,
-				4CC440942DCD07600097CFCD /* APICallConvertible.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		4CC441202DCD4DA20097CFCD /* Data */ = {
@@ -1014,7 +997,6 @@
 				4C96076E2DC7E66A0054D0FD /* AdApiModel.swift in Sources */,
 				4C9607332DC57F9B0054D0FD /* PropertyStoring.swift in Sources */,
 				4C9607302DC57E170054D0FD /* UIView+Extensions.swift in Sources */,
-				4CC440932DCD07500097CFCD /* APIPathConvertible.swift in Sources */,
 				4CC4413C2DCD63990097CFCD /* AdUiModel.swift in Sources */,
 				4C9607452DC583740054D0FD /* AdsPresenterInterface.swift in Sources */,
 				4C96072B2DC57DA50054D0FD /* LoadingIndicator.swift in Sources */,
@@ -1036,14 +1018,12 @@
 				4C9607812DC7F16A0054D0FD /* PriceApiModel.swift in Sources */,
 				4C9607712DC7EC680054D0FD /* PriceInfoApiModel.swift in Sources */,
 				4CC441362DCD58B10097CFCD /* PriceEntity.swift in Sources */,
-				4CC440952DCD07600097CFCD /* APICallConvertible.swift in Sources */,
 				4CC4411F2DCD499F0097CFCD /* ApiRequester.swift in Sources */,
 				4CC4408C2DCD047A0097CFCD /* ApiDecoder.swift in Sources */,
 				4C96071C2DC57A7E0054D0FD /* NavigationController.swift in Sources */,
 				4C96072D2DC57DAB0054D0FD /* LoadingView.swift in Sources */,
 				4C96077F2DC7F12F0054D0FD /* ImageApiModel.swift in Sources */,
 				4CC441302DCD58350097CFCD /* ImageEntity.swift in Sources */,
-				4CC4408E2DCD07080097CFCD /* APICall.swift in Sources */,
 				4C9607032DC5717F0054D0FD /* ViewController.swift in Sources */,
 				4CC441262DCD57630097CFCD /* AdEntity.swift in Sources */,
 				4C9607772DC7ECB70054D0FD /* FeatureApiModel.swift in Sources */,

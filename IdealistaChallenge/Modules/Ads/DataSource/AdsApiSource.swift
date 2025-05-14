@@ -29,8 +29,6 @@ public class AdsApiSource: AdsApiSourceInterface {
     public func getAds(success: @escaping ([AdEntity]) -> Void,
                        failure: @escaping (ErrorEntity) -> Void) {
         
-        let url = URL(string: "https://idealista.github.io/ios-challenge/list.json")! //TODO: - Add dinamic url
-        
         
         let onSuccess: ([AdApiModel]) -> Void = { (ads) in
             
@@ -39,9 +37,13 @@ public class AdsApiSource: AdsApiSourceInterface {
             print(adsEntity)
         }
         
-        request(url, success: onSuccess) { error in
-            print(error)
+        let onFailure: (ErrorApiModel) -> Void = { (apiError) in
+            failure(ErrorEntity(error: apiError))
         }
+        
+        request(ApiPath().getURL(path: .list),
+                success: onSuccess,
+                failure: onFailure)
     }
 }
 

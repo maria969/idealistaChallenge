@@ -30,6 +30,17 @@ public class AdTableViewCell: UITableViewCell {
         return label
     }()
     
+    private var descriptionLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 4
+        label.font = .systemFont(ofSize: 17.0)
+        label.textAlignment = .left
+        label.textColor = .darkGray
+        
+        return label
+    }()
+    
     private var infoView: UIView = {
         let view = UIView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -78,6 +89,7 @@ public class AdTableViewCell: UITableViewCell {
         selectionStyle = .none
         configureadImageView()
         configureNameLabel()
+        configureDesriptionLabel()
         configureInfoView()
         configureInfoLabel()
         configureSeparatorView()
@@ -85,7 +97,7 @@ public class AdTableViewCell: UITableViewCell {
     
     private func configureadImageView() {
         contentView.addSubview(adImageView)
-        adImageView.centerY(withView: contentView)
+        adImageView.top(withView: contentView, constant: 5.0)
         adImageView.leading(withView: contentView, constant: 12.0)
         adImageView.trailing(withView: contentView, constant: -12.0)
         adImageView.height(constant: 200.0)
@@ -95,14 +107,22 @@ public class AdTableViewCell: UITableViewCell {
         contentView.addSubview(nameLabel)
         nameLabel.top(toBottom: adImageView, fromView: contentView, constant: 10)
         nameLabel.leading(toView: adImageView, fromView: contentView)
+        nameLabel.trailing(toView: adImageView, fromView: contentView)
+    }
+    
+    private func configureDesriptionLabel() {
+        contentView.addSubview(descriptionLabel)
+        descriptionLabel.top(toBottom: nameLabel, fromView: contentView)
+        descriptionLabel.leading(toView: nameLabel, fromView: contentView)
+        descriptionLabel.trailing(toView: nameLabel, fromView: contentView)
     }
     
     private func configureInfoView() {
         contentView.addSubview(infoView)
         infoView.height(constant: 10.0)
         infoView.width(constant: 10.0)
-        infoView.top(toBottom: nameLabel, fromView: contentView, constant: 10.0)
-        infoView.leading(toView: nameLabel, fromView: contentView)
+        infoView.top(toBottom: descriptionLabel, fromView: contentView, constant: 10.0)
+        infoView.leading(toView: descriptionLabel, fromView: contentView)
     }
     
     private func configureInfoLabel() {
@@ -124,10 +144,9 @@ public class AdTableViewCell: UITableViewCell {
     // MARK: - Public Methods
     
     public func configureCell(with item: AdCellRepresentable) {
-        
         adImageView.load(url: item.imageURL)
-//        adImageView.image = UIImage.home
         nameLabel.text = item.address
+        descriptionLabel.text = item.description
         infoView.backgroundColor = item.operationColor ?? .clear
         infoLabel.text = item.operation
     }

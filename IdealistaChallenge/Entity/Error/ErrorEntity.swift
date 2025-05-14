@@ -26,4 +26,14 @@ public class ErrorEntity {
         self.code = code
         self.message = message
     }
+    
+    public required init(error: ErrorApiModel) {
+        switch error.code {
+        case .server(let statusCode):
+            self.code = .serverError(statusCode.rawValue)
+        case .other:
+            self.code = .other
+        }
+        self.message = error.message
+    }
 }

@@ -7,18 +7,17 @@
 
 import Foundation
 
-public enum APIPath {
-    
-    public enum Path {}
+public enum Path: String {
+    case list = "list.json"
+    case detail = "detail.json"
 }
 
-public typealias APIPaths = APIPath.Path
 
-// MARK: - Chats
-
-extension APIPath.Path {
+public class ApiPath {
+    let baseUrl: String = "https://idealista.github.io/ios-challenge/"
     
-    public enum Ads: String, APIPathConvertible {
-        case list = ""
+    public func getURL(path: Path) -> URL {
+        let urlString = "\(baseUrl)\(path.rawValue)"
+        return URL(string: urlString)!
     }
 }
