@@ -100,6 +100,7 @@
 		4CC4413C2DCD63990097CFCD /* AdUiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC4413B2DCD63990097CFCD /* AdUiModel.swift */; };
 		4CC441402DCD665D0097CFCD /* AdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC4413F2DCD665D0097CFCD /* AdTableViewCell.swift */; };
 		4CD5F9102DD9FD4F00EEC495 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD5F90F2DD9FD4F00EEC495 /* DateFormatter+Extensions.swift */; };
+		4CD5F9152DDA00DF00EEC495 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 4CD5F9142DDA00DF00EEC495 /* Localizable.xcstrings */; };
 		4CE950022DD92F9300D98EF7 /* IdealistaFav.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CE950002DD92F9300D98EF7 /* IdealistaFav.xcdatamodeld */; };
 		4CE950052DD9303600D98EF7 /* AdFav+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE950032DD9303600D98EF7 /* AdFav+CoreDataClass.swift */; };
 		4CE950062DD9303600D98EF7 /* AdFav+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE950042DD9303600D98EF7 /* AdFav+CoreDataProperties.swift */; };
@@ -224,6 +225,7 @@
 		4CC4413B2DCD63990097CFCD /* AdUiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdUiModel.swift; sourceTree = "<group>"; };
 		4CC4413F2DCD665D0097CFCD /* AdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTableViewCell.swift; sourceTree = "<group>"; };
 		4CD5F90F2DD9FD4F00EEC495 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		4CD5F9142DDA00DF00EEC495 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		4CE950012DD92F9300D98EF7 /* IdealistaFav.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IdealistaFav.xcdatamodel; sourceTree = "<group>"; };
 		4CE950032DD9303600D98EF7 /* AdFav+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdFav+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4CE950042DD9303600D98EF7 /* AdFav+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdFav+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -572,6 +574,7 @@
 		4C9607152DC571BF0054D0FD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4CD5F9112DDA008000EEC495 /* Localization */,
 				4C9607182DC572240054D0FD /* LaunchScreen */,
 				4C9607172DC572170054D0FD /* Assets */,
 			);
@@ -1105,6 +1108,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		4CD5F9112DDA008000EEC495 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				4CD5F9142DDA00DF00EEC495 /* Localizable.xcstrings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		4CE94FFD2DD92DCA00D98EF7 /* ApiSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -1221,6 +1232,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 4C9606492DC56B3C0054D0FD;
 			minimizedProjectReferenceProxies = 1;
@@ -1243,6 +1255,7 @@
 			files = (
 				4C9607042DC5717F0054D0FD /* Assets.xcassets in Resources */,
 				4C9607062DC5717F0054D0FD /* LaunchScreen.storyboard in Resources */,
+				4CD5F9152DDA00DF00EEC495 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1536,6 +1549,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -1598,6 +1612,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

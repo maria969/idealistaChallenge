@@ -21,12 +21,12 @@ public class ErrorApiModel: Decodable {
     
     public static var `default`: ErrorApiModel {
         return ErrorApiModel(code: ErrorApiModel.Code.other,
-                             message: "idealistachallenge.error.server.general") //TODO: - Localized String
+                             message: String(localized: "idealistachallenge.error.server.general"))
     }
     
     public static var noConnection: ErrorApiModel {
         return ErrorApiModel(code: ErrorApiModel.Code.server(HTTPStatusCode.noConnection),
-                             message: "idealistachallenge.error.server.no_connection")
+                             message: String(localized: "idealistachallenge.error.server.no_connection"))
     }
     
     enum CodingKeys: String, CodingKey {
@@ -48,13 +48,13 @@ public class ErrorApiModel: Decodable {
     
     public required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        self.message = try values.decodeIfPresent(String.self, forKey: .message) ?? "idealistachallenge.error.server.general" //TODO: - Localized String
+        self.message = try values.decodeIfPresent(String.self, forKey: .message) ?? String(localized: "idealistachallenge.error.server.general")
     }
     
     // MARK: - Public Methods
     
     public class func defaultError(for statusCode: HTTPStatusCode) -> ErrorApiModel {
         return ErrorApiModel(code: ErrorApiModel.Code.server(statusCode),
-                             message: "idealistachallenge.error.server.general")  //TODO: - Localized String
+                             message: String(localized: "idealistachallenge.error.server.general"))
     }
 }

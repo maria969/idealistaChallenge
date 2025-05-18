@@ -14,8 +14,8 @@ public enum OperationEnumEntity {
     
     public var localizedString: String {
         switch self {
-        case .sale: "Venta"
-        case .rent: "Alquiler" //TODO: - Localized Strings
+        case .sale: String(localized: "Sale")
+        case .rent: String(localized: "Rent")
         }
     }
     

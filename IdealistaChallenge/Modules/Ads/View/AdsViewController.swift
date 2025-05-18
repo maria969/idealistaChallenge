@@ -57,7 +57,7 @@ public class AdsViewController: UIViewController {
     // MARK: - Layout
     
     private func layoutSubviews() {
-        title = "Ads" //TODO: - Add Localized
+        title = String(localized: "Ads")
         view.backgroundColor = .white
         configureTableView()
     }

@@ -56,7 +56,7 @@ public class AdDetailTableViewCell: UITableViewCell {
         let view = InfoView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textAlignment = .left
-        view.titleLabel.text = "Operation" //TODO: - Add Localized
+        view.titleLabel.text = String(localized: "Operation")
         
         return view
     }()
@@ -65,7 +65,7 @@ public class AdDetailTableViewCell: UITableViewCell {
         let view = InfoView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textAlignment = .right
-        view.titleLabel.text = "Size" //TODO: - Add Localized
+        view.titleLabel.text = String(localized: "Size")
         
         return view
     }()
@@ -74,7 +74,7 @@ public class AdDetailTableViewCell: UITableViewCell {
         let view = InfoView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textAlignment = .left
-        view.titleLabel.text = "Rooms" //TODO: - Add Localized
+        view.titleLabel.text = String(localized: "Rooms")
         
         return view
     }()
@@ -83,7 +83,7 @@ public class AdDetailTableViewCell: UITableViewCell {
         let view = InfoView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textAlignment = .right
-        view.titleLabel.text = "Bathrooms" //TODO: - Add Localized
+        view.titleLabel.text = String(localized: "Bathrooms")
         
         return view
     }()
@@ -92,7 +92,7 @@ public class AdDetailTableViewCell: UITableViewCell {
         let view = InfoView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textAlignment = .left
-        view.titleLabel.text = "Floor" //TODO: - Add Localized
+        view.titleLabel.text = String(localized: "Floor")
         
         return view
     }()
@@ -101,7 +101,7 @@ public class AdDetailTableViewCell: UITableViewCell {
         let view = InfoView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.textAlignment = .right
-        view.titleLabel.text = "Flat Location" //TODO: - Add Localized
+        view.titleLabel.text = String(localized: "Flat Location")
         
         return view
     }()
