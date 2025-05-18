@@ -19,6 +19,9 @@ public class AdUiModel: AdCellRepresentable {
     public var operationColor: UIColor?
     public var description: String
     public var priceInfo: PriceEntity
+    public var isFav: Bool
+    public var favDate: String?
+    public var onClickFavButton: (() -> Void)?
     
     public var onSelection: (() -> Void)?
     
@@ -34,6 +37,8 @@ public class AdUiModel: AdCellRepresentable {
                 operation: String,
                 operationColor: UIColor?,
                 description: String,
+                isFav: Bool,
+                favDate: String?,
                 priceInfo: PriceEntity) {
         self.address = address
         self.imageURL = imageURL
@@ -41,6 +46,8 @@ public class AdUiModel: AdCellRepresentable {
         self.operation = operation
         self.operationColor = operationColor
         self.description = description
+        self.isFav = isFav
+        self.favDate = favDate
         self.priceInfo = priceInfo
     }
 

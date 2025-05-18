@@ -10,4 +10,7 @@ import Foundation
 public protocol AdsInteractorInterface: Interactor {
     func getAds(success: @escaping([AdEntity]) -> Void,
                 failure: @escaping(ErrorEntity) -> Void)
+    func updateAdFav(ad: AdEntity,
+                     success: @escaping () -> Void,
+                     failure: @escaping (ErrorEntity) -> Void)
 }

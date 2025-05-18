@@ -34,7 +34,7 @@ public class AdTableViewCell: UITableViewCell {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 4
-        label.font = .systemFont(ofSize: 17.0)
+        label.font = .systemFont(ofSize: 15.0)
         label.textAlignment = .left
         label.textColor = .darkGray
         
@@ -55,6 +55,23 @@ public class AdTableViewCell: UITableViewCell {
         label.font = .systemFont(ofSize: 17.0)
         label.textAlignment = .left
         label.textColor = .black
+        
+        return label
+    }()
+    
+    private var favButton: UIButton = {
+        let button = UIButton(frame: .zero)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        return button
+    }()
+    
+    private var favDateLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 10.0)
+        label.textAlignment = .right
+        label.textColor = .gray
         
         return label
     }()
@@ -90,8 +107,10 @@ public class AdTableViewCell: UITableViewCell {
         configureadImageView()
         configureNameLabel()
         configureDesriptionLabel()
+        configureFavButton()
         configureInfoView()
         configureInfoLabel()
+        configureFavLabel()
         configureSeparatorView()
     }
     
@@ -116,12 +135,26 @@ public class AdTableViewCell: UITableViewCell {
         descriptionLabel.leading(toView: nameLabel, fromView: contentView)
         descriptionLabel.trailing(toView: nameLabel, fromView: contentView)
     }
+    private func configureFavButton() {
+        contentView.addSubview(favButton)
+        favButton.height(constant: 25.0)
+        favButton.width(constant: 25.0)
+        favButton.top(toBottom: descriptionLabel, fromView: contentView, constant: 10.0)
+        favButton.trailing(toView: descriptionLabel, fromView: contentView)
+    }
+    
+    private func configureFavLabel() {
+        contentView.addSubview(favDateLabel)
+        favDateLabel.centerY(withView: favButton, fromView: contentView)
+        favDateLabel.right(toLeft: favButton, fromView: contentView, constant: -4.0)
+        favDateLabel.leading(toView: infoLabel, fromView: contentView, constant: 8.0, relation: .greaterThanOrEqual)
+    }
     
     private func configureInfoView() {
         contentView.addSubview(infoView)
         infoView.height(constant: 10.0)
         infoView.width(constant: 10.0)
-        infoView.top(toBottom: descriptionLabel, fromView: contentView, constant: 10.0)
+        infoView.centerY(withView: favButton, fromView: contentView)
         infoView.leading(toView: descriptionLabel, fromView: contentView)
     }
     
@@ -129,14 +162,14 @@ public class AdTableViewCell: UITableViewCell {
         contentView.addSubview(infoLabel)
         infoLabel.centerY(withView: infoView, fromView: contentView)
         infoLabel.left(toRight: infoView, fromView: contentView, constant: 8.0)
-        infoLabel.trailing(withView: contentView, constant: -16.0)
+        
     }
     
     private func configureSeparatorView() {
         contentView.addSubview(separatorView)
-        separatorView.top(toBottom: infoView, fromView: contentView, constant: 12.0)
+        separatorView.top(toBottom: favButton, fromView: contentView, constant: 12.0)
         separatorView.bottom(withView: contentView, priority: 900)
-        separatorView.leading(withView: contentView, constant: 20.0)
+        separatorView.leading(withView: contentView)
         separatorView.trailing(withView: contentView)
         separatorView.height(constant: 0.5)
     }
@@ -149,5 +182,17 @@ public class AdTableViewCell: UITableViewCell {
         descriptionLabel.text = item.description
         infoView.backgroundColor = item.operationColor ?? .clear
         infoLabel.text = item.operation
+        favButton.onTouch = { (button) in
+            item.onClickFavButton?()
+        }
+        configureFav(item: item)
+        favDateLabel.text = item.favDate
+    }
+    
+    // MARK: - Private Methods {
+    
+    private func configureFav(item: AdCellRepresentable) {
+        let favImage: UIImage = item.isFav ? .favOn : .favOff
+        favButton.setImage(favImage, for: .normal)
     }
 }

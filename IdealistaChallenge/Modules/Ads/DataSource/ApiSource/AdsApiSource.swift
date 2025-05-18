@@ -34,7 +34,6 @@ public class AdsApiSource: AdsApiSourceInterface {
             
             let adsEntity = self.mapper.map(adsApiModel: ads)
             success(adsEntity)
-            print(adsEntity)
         }
         
         let onFailure: (ErrorApiModel) -> Void = { (apiError) in

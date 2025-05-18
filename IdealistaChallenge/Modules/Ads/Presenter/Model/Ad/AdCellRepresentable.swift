@@ -16,4 +16,7 @@ public protocol AdCellRepresentable: CellRepresentable, SelectableCellRepresenta
     var operationColor: UIColor? { get }
     var description: String { get }
     var priceInfo: PriceEntity { get }
+    var isFav: Bool { get }
+    var favDate: String? { get }
+    var onClickFavButton: (() -> Void)? { get }
 }

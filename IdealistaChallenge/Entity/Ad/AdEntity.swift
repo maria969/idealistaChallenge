@@ -35,6 +35,8 @@ public class AdEntity {
     public let multimedia: [ImageEntity]
     public let features: FeatureEntity
     public let parkingSpace: ParkingSpaceEntity?
+    public var isFav: Bool
+    public var favDate: Date?
     
     // MARK: - Initializers
     
@@ -59,7 +61,8 @@ public class AdEntity {
                          description: String,
                          multimedia: [ImageEntity],
                          features: FeatureEntity,
-                         parkingSpace: ParkingSpaceEntity?) {
+                         parkingSpace: ParkingSpaceEntity?,
+                         isFav: Bool = false) {
         self.propertyCode = propertyCode
         self.thumbnailUrl = thumbnailUrl
         self.floor = floor
@@ -83,5 +86,6 @@ public class AdEntity {
         self.multimedia = multimedia
         self.features = features
         self.parkingSpace = parkingSpace
+        self.isFav = isFav
     }
 }

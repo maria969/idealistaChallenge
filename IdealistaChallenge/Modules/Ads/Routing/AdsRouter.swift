@@ -19,7 +19,8 @@ public class AdsRouter: AdsRouterInterface {
         
         let client = ApiRequester.sharedInstance
         
-        let interactor = AdsInteractor(adsApiSource: AdsApiSource(client: client))
+        let interactor = AdsInteractor(adsApiSource: AdsApiSource(client: client),
+                                       adsCoreData: AdsCoreData())
         
         let router = AdsRouter()
         

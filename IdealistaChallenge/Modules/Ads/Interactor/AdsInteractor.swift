@@ -16,11 +16,14 @@ public class AdsInteractor: AdsInteractorInterface {
     // MARK: - Private Properties
     
     private let adsApiSource: AdsApiSourceInterface
+    private let adsCoreData: AdsCoreDataInterface
     
     // MARK: - Initializers
     
-    required init(adsApiSource: AdsApiSourceInterface) {
+    required init(adsApiSource: AdsApiSourceInterface,
+                  adsCoreData: AdsCoreDataInterface) {
         self.adsApiSource = adsApiSource
+        self.adsCoreData = adsCoreData
     }
     
     // MARK: - Public Methods
@@ -29,6 +32,15 @@ public class AdsInteractor: AdsInteractorInterface {
                        failure: @escaping (ErrorEntity) -> Void) {
         
         let safeSuccess: ([AdEntity]) -> Void = { ads in
+            
+            for ad in ads {
+                guard let favorite = self._isFavAd(ad: ad) else {
+                    continue
+                }
+                ad.isFav = true
+                ad.favDate = favorite.date
+            }
+            
             self.finish { success(ads) }
         }
         
@@ -39,6 +51,23 @@ public class AdsInteractor: AdsInteractorInterface {
         execute { (interactor: AdsInteractor) in
             interactor._getAds(success: safeSuccess,
                                failure: safeFailure)
+        }
+    }
+    
+    public func updateAdFav(ad: AdEntity,
+                            success: @escaping () -> Void,
+                            failure: @escaping (ErrorEntity) -> Void) {
+        
+        let safeSuccess: () -> Void = {
+            self.finish { success() }
+        }
+        
+        let safeFailure: (ErrorEntity) -> Void = { error in
+            self.finish { failure(error) }
+        }
+        
+        execute { (interactor: AdsInteractor) in
+            interactor._updateFavAd(ad: ad, completion: safeSuccess, failure: safeFailure)
         }
     }
 }
@@ -53,6 +82,35 @@ extension AdsInteractor {
         } failure: { (error) in
             failure(error)
         }
+    }
+    
+    private func _isFavAd(ad: AdEntity) -> AdFav? {
+        var adFavorite: AdFav? = nil
+        
+        adsCoreData.getFav(ad: ad) { (adFav) in
+            adFavorite = adFav
+        } failure: { (error) in
+            adFavorite = nil
+        }
+        
+        return adFavorite
+    }
+    
+    private func _updateFavAd(ad: AdEntity, completion: @escaping () -> Void, failure: @escaping (ErrorEntity) -> Void) {
+        if ad.isFav {
+            adsCoreData.deleteAdFav(ad: ad) {
+                completion()
+            } failure: { (error) in
+                failure(error)
+            }
 
+        } else {
+            adsCoreData.saveAdFav(ad: ad) { AdFav in
+                completion()
+            } failure: { (error) in
+                failure(error)
+            }
+
+        }
     }
 }

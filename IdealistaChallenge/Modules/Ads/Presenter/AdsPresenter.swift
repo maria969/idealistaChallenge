@@ -44,9 +44,6 @@ public class AdsPresenter: AdsPresenterInterface {
         interactor.getAds { [weak self] (ads) in
             guard let strongSelf = self else { return }
             
-            //TODO: - Show Ads
-            print(ads)
-            
             let cells = strongSelf.createCells(from: ads)
             strongSelf.adsView?.showListModules(cells)
             strongSelf.view?.hideLoading()
@@ -55,7 +52,6 @@ public class AdsPresenter: AdsPresenterInterface {
             guard let strongSelf = self else { return }
             
             //TODO: - Show Error
-            
             strongSelf.view?.hideLoading()
         }
 
@@ -73,17 +69,35 @@ extension AdsPresenter {
     
     private func map(ads: [AdEntity]) -> [CellRepresentable] {
         return ads.map { ad in
+            let dateFormatter = DateFormatter.favDateFormatter
+            
+            var favDateString: String? = nil
+            if let date = ad.favDate {
+                favDateString = dateFormatter.string(from: date)
+            }
+            
             let model = AdUiModel(address: ad.address,
                                   imageURL: URL(string: ad.thumbnailUrl),
                                   propertyType: ad.propertyType,
                                   operation: ad.operation.localizedString,
                                   operationColor: ad.operation.operationColor,
                                   description: ad.description,
+                                  isFav: ad.isFav,
+                                  favDate: favDateString,
                                   priceInfo: ad.priceInfo)
             
             model.onSelection = { [weak self] in
                 guard let strongSelf = self else { return }
                 strongSelf.routing.presentAd(ad: ad)
+            }
+            
+            model.onClickFavButton = { [weak self] in
+                guard let strongSelf = self else { return }
+                strongSelf.interactor.updateAdFav(ad: ad) {
+                    strongSelf.loadAds()
+                } failure: { error in
+                    print("Error: \(error)")
+                }
             }
             
             return model
