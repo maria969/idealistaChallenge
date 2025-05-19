@@ -25,7 +25,7 @@ public class AdDetailTableViewCell: UITableViewCell {
         label.numberOfLines = 0
         label.font = .systemFont(ofSize: 17.0)
         label.textAlignment = .left
-        label.textColor = .black
+        label.textColor = .text
         
         return label
     }()
@@ -36,7 +36,7 @@ public class AdDetailTableViewCell: UITableViewCell {
         label.numberOfLines = 0
         label.font = .systemFont(ofSize: 18.0, weight: .medium)
         label.textAlignment = .center
-        label.textColor = .black
+        label.textColor = .text
         
         return label
     }()

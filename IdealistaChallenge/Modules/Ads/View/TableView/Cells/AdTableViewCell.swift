@@ -25,7 +25,7 @@ public class AdTableViewCell: UITableViewCell {
         label.numberOfLines = 0
         label.font = .systemFont(ofSize: 21.0)
         label.textAlignment = .left
-        label.textColor = .black
+        label.textColor = .text
         
         return label
     }()
@@ -54,7 +54,7 @@ public class AdTableViewCell: UITableViewCell {
         label.numberOfLines = 1
         label.font = .systemFont(ofSize: 17.0)
         label.textAlignment = .left
-        label.textColor = .black
+        label.textColor = .text
         
         return label
     }()
