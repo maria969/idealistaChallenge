@@ -34,14 +34,12 @@ public class AdDetailPresenter: AdDetailPresenterInterface {
     // MARK: - Public Methods
     
     public func viewDidLoad() {
-//        adDetailView?.showLoading()
         interactor.getAdDetail { [weak self] (ad) in
             guard let strongSelf = self else { return }
             let cells = strongSelf.createCells(from: ad)
             strongSelf.adDetailView?.showAdDetail(cells)
             strongSelf.adDetailView?.hideLoading()
         }
-        
     }
 }
 
@@ -60,7 +58,9 @@ private extension AdDetailPresenter {
                                      bathNumber: ad.moreCharacteristics.bathNumber,
                                      constructedArea: ad.moreCharacteristics.constructedArea,
                                      floor: ad.moreCharacteristics.floor,
-                                     flatLocation: ad.moreCharacteristics.flatLocation)
+                                     flatLocation: ad.moreCharacteristics.flatLocation,
+                                     latitude: ad.ubication.latitude,
+                                     longitude: ad.ubication.longitude)
         
         cells.append(detail)
         

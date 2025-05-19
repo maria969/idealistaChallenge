@@ -106,6 +106,12 @@ public class AdDetailTableViewCell: UITableViewCell {
         return view
     }()
     
+    private var mapView: MapView = {
+       let view = MapView(frame: .zero)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     // MARK: - Initializers
     
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -125,6 +131,7 @@ public class AdDetailTableViewCell: UITableViewCell {
         configureAdImageView()
         configureInfoStackView()
         configureDescriptionLabel()
+        configureMapView()
     }
     
     private func configureAdImageView() {
@@ -151,10 +158,19 @@ public class AdDetailTableViewCell: UITableViewCell {
     private func configureDescriptionLabel() {
         contentView.addSubview(descriptionLabel)
         descriptionLabel.top(toBottom: infoStackView, fromView: contentView, constant: 20.0)
-        descriptionLabel.bottom(withView: contentView, constant: -10.0)
         descriptionLabel.leading(withView: contentView, constant: 20.0, relation: .greaterThanOrEqual)
         descriptionLabel.trailing(withView: contentView, constant: -20.0)
         descriptionLabel.centerX(withView: contentView)
+    }
+    
+    private func configureMapView() {
+        contentView.addSubview(mapView)
+        mapView.top(toBottom: descriptionLabel, fromView: contentView, constant: 20.0)
+        mapView.bottom(withView: contentView, constant: -10.0)
+        mapView.height(constant: 500)
+        mapView.leading(withView: contentView, constant: 20.0)
+        mapView.trailing(withView: contentView, constant: -20.0)
+        mapView.centerX(withView: contentView)
     }
     
     private func configureInfoRow(withViews views: [UIView]) {
@@ -183,6 +199,8 @@ public class AdDetailTableViewCell: UITableViewCell {
         bathroomsView.valueLabel.text = item.bathNumber.description
         floorView.valueLabel.text = item.floor
         flatLocation.valueLabel.text = item.flatLocation
+    
+        mapView.addAnotation(latitude: item.latitude, longitude: item.longitude)
         
         checkInfoViews()
     }

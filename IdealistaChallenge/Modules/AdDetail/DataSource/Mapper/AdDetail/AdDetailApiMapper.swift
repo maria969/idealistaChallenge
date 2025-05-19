@@ -72,7 +72,7 @@ public class AdDetailApiMapper {
     }
     
     private func map(ubication: UbicationApiModel) -> UbicationEntity {
-        UbicationEntity(latitude: ubication.latitude,
-                        longitude: ubication.longitude)
+        UbicationEntity(latitude: Double(ubication.latitude),
+                        longitude: Double(ubication.longitude))
     }
 }

@@ -18,4 +18,6 @@ public protocol AdDetailCellRepresentable: CellRepresentable {
     var constructedArea: Int { get }
     var floor: String { get }
     var flatLocation: String { get }
+    var latitude: Double { get }
+    var longitude: Double { get }
 }

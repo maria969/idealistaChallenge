@@ -21,6 +21,8 @@ public class AdDetailUiModel: AdDetailCellRepresentable {
     public var constructedArea: Int
     public var floor: String
     public var flatLocation: String
+    public var latitude: Double
+    public var longitude: Double
         
     public var cellType: UITableViewCell.Type {
         AdDetailTableViewCell.self
@@ -36,7 +38,9 @@ public class AdDetailUiModel: AdDetailCellRepresentable {
                 bathNumber: Int,
                 constructedArea: Int,
                 floor: String,
-                flatLocation: String) {
+                flatLocation: String,
+                latitude: Double,
+                longitude: Double) {
         self.comment = comment
         self.multimedia = multimedia
         self.operation = operation
@@ -46,6 +50,8 @@ public class AdDetailUiModel: AdDetailCellRepresentable {
         self.constructedArea = constructedArea
         self.floor = floor
         self.flatLocation = flatLocation
+        self.latitude = latitude
+        self.longitude = longitude
     }
 
     

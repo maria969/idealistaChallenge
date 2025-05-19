@@ -11,13 +11,13 @@ public class UbicationEntity {
     
     // MARK: - Public Properties
     
-    public let latitude: Float
-    public let longitude: Float
+    public let latitude: Double
+    public let longitude: Double
     
     // MARK: - Initializers
     
-    public required init(latitude: Float,
-                         longitude: Float) {
+    public required init(latitude: Double,
+                         longitude: Double) {
         self.latitude = latitude
         self.longitude = longitude
     }
