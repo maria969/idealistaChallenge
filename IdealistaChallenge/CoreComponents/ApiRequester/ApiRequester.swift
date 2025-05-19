@@ -27,7 +27,7 @@ public final class ApiRequester {
     public required init(environmentManager: EnvironmentManagerInterface) {
         self.environmentManager = environmentManager
         self.client = ApiClient(environment: environmentManager,
-                                queue: DispatchQueue(label: "com.mariaherrerovaras.rickandmorty.ApiRequester"))
+                                queue: DispatchQueue(label: "com.mariaherrerovaras.idealistaChallenge.ApiRequester"))
     }
 }
 
