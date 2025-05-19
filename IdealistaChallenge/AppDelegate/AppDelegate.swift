@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mainNavigationController = NavigationController(rootViewController: adsVC.viewController)
         
         window?.rootViewController = mainNavigationController
-        window?.backgroundColor = UIColor.white
+        window?.backgroundColor = .clear
         window?.makeKeyAndVisible()
     }
 }

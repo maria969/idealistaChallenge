@@ -58,7 +58,7 @@ public class AdDetailViewController: UIViewController {
     
     private func layoutSubviews() {
         title = String(localized: "Detail")
-        view.backgroundColor = .white
+        view.backgroundColor = .clear
         configureTableView()
     }
     
