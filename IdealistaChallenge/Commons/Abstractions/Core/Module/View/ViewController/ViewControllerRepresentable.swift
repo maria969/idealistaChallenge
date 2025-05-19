@@ -53,6 +53,21 @@ extension UIViewController {
                 animated: flag,
                 completion: completion)
     }
+    
+    public func showAlertMessage(title: String,
+                                 messgae: String,
+                                 buttonTitle: String,
+                                 completion: (() -> Void)? = nil) {
+        let alert = UIAlertController(title: title,
+                                      message: messgae,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: buttonTitle,
+                                      style: .default,
+                                      handler: nil))
+        present(alert,
+                animated: true,
+                completion: completion)
+    }
 }
 
 // MARK: - UINavigationController

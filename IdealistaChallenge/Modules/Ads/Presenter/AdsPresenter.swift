@@ -50,8 +50,7 @@ public class AdsPresenter: AdsPresenterInterface {
     
         } failure: { [weak self] (error) in
             guard let strongSelf = self else { return }
-            
-            //TODO: - Show Error
+            strongSelf.view?.viewController.showAlertMessage(title: "Error", messgae: error.message, buttonTitle: "Ok")
             strongSelf.view?.hideLoading()
         }
 
@@ -63,8 +62,6 @@ public class AdsPresenter: AdsPresenterInterface {
 extension AdsPresenter {
     private func createCells(from ads: [AdEntity]) -> [CellRepresentable] {
         return map(ads: ads)
-        
-        // TODO: - Create Placeholder
     }
     
     private func map(ads: [AdEntity]) -> [CellRepresentable] {

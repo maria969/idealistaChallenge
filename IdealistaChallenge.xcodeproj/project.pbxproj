@@ -683,10 +683,10 @@
 		4C9607282DC57D850054D0FD /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				4C62DEBF2DDB26710004ADD0 /* MapView */,
 				4C79BAE72DD54197006A1212 /* InfoView */,
-				4C96074F2DC585170054D0FD /* ModuleTableView */,
 				4C9607292DC57D920054D0FD /* LoadingView */,
+				4C62DEBF2DDB26710004ADD0 /* MapView */,
+				4C96074F2DC585170054D0FD /* ModuleTableView */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
